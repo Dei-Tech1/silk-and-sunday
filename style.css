@@ -1066,3 +1066,194 @@ section {
    END OF BLOCK 5
 ========================================= */
 
+
+/* =========================================
+   10 — WHY SILK & SUNDAY
+========================================= */
+
+.why-section {
+  position: relative;
+  padding: 115px 0 105px;
+  overflow: hidden;
+  background: var(--cocoa);
+  color: var(--ivory);
+}
+
+/* SECTION HEADING */
+
+.why-section .section-heading {
+  margin-bottom: 65px;
+}
+
+.why-section .section-title {
+  color: var(--ivory);
+}
+
+.why-section .section-title em {
+  color: var(--gold-light);
+}
+
+.why-section .section-description {
+  color: rgba(255,249,242,0.75);
+}
+
+/* THREE VALUE CARDS */
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.why-card {
+  position: relative;
+  padding: 45px 35px 50px;
+  background: rgba(255,255,255,0.035);
+  border: 1px solid var(--gold-border);
+  transition: transform 0.4s ease,
+              background 0.4s ease,
+              border-color 0.4s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  background: rgba(197,164,119,0.09);
+  border-color: var(--gold);
+}
+
+/* CARD NUMBER */
+
+.why-number {
+  display: block;
+  margin-bottom: 32px;
+  color: var(--gold-light);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+/* DECORATIVE ICON */
+
+.why-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 30px;
+  border: 1px solid var(--gold-border);
+  border-radius: 50%;
+  color: var(--gold-light);
+  font-size: 30px;
+}
+
+/* CARD TYPOGRAPHY */
+
+.why-card h3 {
+  margin-bottom: 20px;
+  color: var(--ivory);
+  font-size: clamp(23px, 2.2vw, 30px);
+}
+
+.why-card p {
+  color: rgba(255,249,242,0.7);
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+/* BRAND STATEMENT */
+
+.why-statement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 85px;
+  text-align: center;
+}
+
+.why-statement p {
+  font-family: var(--font-heading);
+  color: var(--ivory);
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.5;
+}
+
+.why-statement em {
+  color: var(--gold-light);
+}
+
+.statement-line {
+  width: 65px;
+  height: 1px;
+  flex-shrink: 0;
+  background: var(--gold);
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .why-section {
+    padding: 85px 0;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .why-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .why-section {
+    padding: 70px 0;
+  }
+
+  .why-section .section-heading {
+    margin-bottom: 40px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .why-card,
+  .why-card:last-child {
+    grid-column: auto;
+  }
+
+  .why-card {
+    padding: 35px 28px;
+  }
+
+  .why-number {
+    margin-bottom: 20px;
+  }
+
+  .why-icon {
+    margin-bottom: 20px;
+  }
+
+  .why-statement {
+    gap: 12px;
+    margin-top: 55px;
+  }
+
+  .statement-line {
+    width: 20px;
+  }
+
+}
+
+/* =========================================
+   END OF BLOCK 6
+========================================= */
+     
