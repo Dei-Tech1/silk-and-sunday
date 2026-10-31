@@ -1,1 +1,217 @@
 
+/* =========================================
+   SILK & SUNDAY INTIMATES
+   PREMIUM WEBSITE DESIGN
+   DEVELOPED BY GODZYA GROUP
+========================================= */
+
+/* =========================================
+   01 — BRAND COLOUR SYSTEM
+========================================= */
+
+:root {
+
+  /* Primary colours */
+  --cocoa: #49312F;
+  --cocoa-dark: #30201F;
+  --gold: #C5A477;
+  --gold-light: #E5C595;
+
+  /* Background colours */
+  --ivory: #FFF9F2;
+  --cream: #F1E6D8;
+  --white: #FFFFFF;
+
+  /* Typography */
+  --text-dark: #49312F;
+  --text-muted: #796963;
+  --text-light: #FFF9F2;
+
+  /* Borders and effects */
+  --border: rgba(73,49,47,0.12);
+  --gold-border: rgba(197,164,119,0.35);
+
+  /* Fonts */
+  --font-heading: "Playfair Display", serif;
+  --font-body: "DM Sans", sans-serif;
+
+  /* Layout */
+  --container: 1240px;
+  --header-height: 90px;
+
+  /* Transitions */
+  --transition: all 0.35s ease;
+
+}
+
+/* =========================================
+   02 — GLOBAL RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--ivory);
+  color: var(--text-dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   03 — TYPOGRAPHY
+========================================= */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(44px, 6vw, 88px);
+}
+
+h2 {
+  font-size: clamp(34px, 4vw, 58px);
+}
+
+h3 {
+  font-size: clamp(23px, 2.5vw, 32px);
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+em {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--gold);
+}
+
+/* =========================================
+   04 — CONTAINERS
+========================================= */
+
+.container,
+.nav-container,
+.hero-container {
+  width: min(100% - 40px, var(--container));
+  margin-inline: auto;
+}
+
+section {
+  position: relative;
+}
+
+.section-eyebrow {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.section-title {
+  margin-bottom: 25px;
+  letter-spacing: -0.035em;
+}
+
+.section-description {
+  max-width: 620px;
+  margin-inline: auto;
+  color: var(--text-muted);
+}
+
+.section-heading {
+  max-width: 800px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+/* =========================================
+   05 — BUTTON SYSTEM
+========================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 14px 32px;
+  border: 1px solid transparent;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--cocoa-dark);
+  border-color: var(--gold);
+}
+
+.btn-primary:hover {
+  background: var(--cocoa);
+  color: var(--ivory);
+  border-color: var(--cocoa);
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--cocoa);
+  border-color: var(--gold);
+}
+
+.btn-outline:hover {
+  background: var(--cocoa);
+  color: var(--ivory);
+  border-color: var(--cocoa);
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   END OF BLOCK 1
+========================================= */
