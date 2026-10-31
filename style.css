@@ -401,3 +401,275 @@ section {
 /* =========================================
    END OF BLOCK 2
 ========================================= */
+
+/* =========================================
+   07 — LUXURY HOMEPAGE HERO
+========================================= */
+
+.hero {
+  position: relative;
+  min-height: 740px;
+  padding: 90px 0 110px;
+  overflow: hidden;
+  background: var(--cocoa-dark);
+  color: var(--ivory);
+}
+
+/* SOFT GOLD BACKGROUND GLOW */
+
+.hero-glow {
+  position: absolute;
+  top: -220px;
+  right: -180px;
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(197,164,119,0.17),
+    transparent 68%
+  );
+  pointer-events: none;
+}
+
+/* HERO LAYOUT */
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+  max-width: 620px;
+}
+
+.hero-eyebrow {
+  display: block;
+  margin-bottom: 26px;
+  color: var(--gold-light);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+}
+
+.hero-title {
+  margin-bottom: 30px;
+  color: var(--ivory);
+  letter-spacing: -0.045em;
+}
+
+.hero-title em {
+  display: block;
+  margin-top: 8px;
+  color: var(--gold-light);
+}
+
+.hero-description {
+  max-width: 520px;
+  margin-bottom: 35px;
+  color: rgba(255,249,242,0.78);
+  font-size: 16px;
+  line-height: 1.95;
+}
+
+/* HERO BUTTONS */
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+
+.hero .btn-outline {
+  color: var(--ivory);
+  border-color: var(--gold);
+}
+
+.hero .btn-outline:hover {
+  background: var(--gold);
+  color: var(--cocoa-dark);
+}
+
+/* BRAND SIGNATURE */
+
+.hero-signature {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--gold-light);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+}
+
+.signature-line {
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* HERO IMAGE */
+
+.hero-visual {
+  position: relative;
+  min-width: 0;
+  padding: 25px;
+}
+
+.hero-image-frame {
+  position: relative;
+  z-index: 2;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid var(--gold-border);
+  background: var(--cocoa);
+  box-shadow: 0 35px 80px rgba(0,0,0,0.28);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.hero-image-frame:hover .hero-image {
+  transform: scale(1.045);
+}
+
+/* FLOATING IMAGE LABEL */
+
+.hero-floating-label {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: -15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 22px 30px;
+  background: var(--ivory);
+  color: var(--cocoa);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.hero-floating-label span {
+  color: var(--text-muted);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+.hero-floating-label strong {
+  font-family: var(--font-heading);
+  font-size: 19px;
+  font-weight: 500;
+}
+
+/* DECORATIVE CIRCLE */
+
+.hero-decorative-circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 130px;
+  height: 130px;
+  border: 1px solid var(--gold-border);
+  border-radius: 50%;
+}
+
+/* SCROLL INDICATOR */
+
+.hero-scroll {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transform: translateX(-50%);
+  color: var(--gold-light);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+}
+
+/* RESPONSIVE HERO */
+
+@media (max-width: 900px) {
+
+  .hero {
+    padding: 70px 0 100px;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .hero-content {
+    max-width: 680px;
+  }
+
+  .hero-visual {
+    width: min(100%, 520px);
+    margin-inline: auto;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 65px 0 100px;
+  }
+
+  .hero-title {
+    font-size: clamp(42px, 11vw, 60px);
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-actions {
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-visual {
+    padding: 12px;
+  }
+
+  .hero-floating-label {
+    left: 0;
+    padding: 15px 20px;
+  }
+
+  .hero-floating-label strong {
+    font-size: 16px;
+  }
+
+  .hero-scroll {
+    bottom: 20px;
+    white-space: nowrap;
+  }
+
+}
+
+/* =========================================
+   END OF BLOCK 3
+========================================= */
+
+
