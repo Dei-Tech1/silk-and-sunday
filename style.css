@@ -1450,3 +1450,200 @@ section {
    END OF BLOCK 7
 ========================================= */
 
+
+/* =========================================
+   12 — PREMIUM FOOTER
+========================================= */
+
+.site-footer {
+  padding: 85px 0 0;
+  background: var(--cocoa-dark);
+  color: var(--ivory);
+  border-top: 1px solid var(--gold-border);
+}
+
+/* FOOTER LAYOUT */
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+  gap: 55px;
+  padding-bottom: 75px;
+}
+
+/* BRAND */
+
+.footer-brand {
+  max-width: 330px;
+}
+
+.footer-logo {
+  width: 175px;
+  height: auto;
+  max-height: 115px;
+  object-fit: contain;
+  object-position: left center;
+  margin-bottom: 22px;
+}
+
+.footer-brand p {
+  margin-bottom: 22px;
+  color: rgba(255,249,242,0.7);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.footer-tagline {
+  color: var(--gold-light);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+}
+
+/* FOOTER COLUMNS */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.footer-column h3 {
+  margin-bottom: 12px;
+  color: var(--gold-light);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.footer-column a {
+  color: rgba(255,249,242,0.75);
+  font-size: 13px;
+  line-height: 1.7;
+  transition: var(--transition);
+}
+
+.footer-column a:hover {
+  color: var(--gold-light);
+}
+
+.footer-column p {
+  color: rgba(255,249,242,0.7);
+  font-size: 13px;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-top: 1px solid var(--gold-border);
+}
+
+.footer-bottom p {
+  color: rgba(255,249,242,0.6);
+  font-size: 12px;
+}
+
+.footer-bottom a {
+  color: var(--gold-light);
+  transition: var(--transition);
+}
+
+.footer-bottom a:hover {
+  color: var(--ivory);
+}
+
+/* =========================================
+   13 — FLOATING WHATSAPP BUTTON
+========================================= */
+
+.whatsapp-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border: 2px solid var(--gold-light);
+  border-radius: 50%;
+  background: var(--cocoa);
+  color: var(--gold-light);
+  box-shadow: 0 8px 28px rgba(48,32,31,0.3);
+  transition: transform 0.3s ease,
+              background 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-5px);
+  background: var(--cocoa-dark);
+}
+
+.whatsapp-icon {
+  font-size: 26px;
+  line-height: 1;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 45px;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .site-footer {
+    padding-top: 65px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    padding-bottom: 55px;
+  }
+
+  .footer-logo {
+    width: 150px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .whatsapp-float {
+    right: 16px;
+    bottom: 16px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .whatsapp-icon {
+    font-size: 23px;
+  }
+
+}
+
+/* =========================================
+   END OF BLOCK 8
+========================================= */
