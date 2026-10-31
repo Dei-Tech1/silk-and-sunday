@@ -113,3 +113,49 @@ document.addEventListener("DOMContentLoaded", () => {
 /* =========================================
    END OF JAVASCRIPT BLOCK 1
 ========================================= */
+
+
+/* =========================================
+   03 — WHATSAPP CUSTOMER ENQUIRIES
+========================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const whatsappButton =
+    document.getElementById("whatsappButton");
+
+  const whatsappNumber = "27627947887";
+
+  const whatsappMessage =
+    "Hello Silk & Sunday Intimates! " +
+    "I'm interested in your collections " +
+    "and would like more information.";
+
+  if (whatsappButton) {
+
+    const whatsappURL =
+      "https://wa.me/" +
+      whatsappNumber +
+      "?text=" +
+      encodeURIComponent(whatsappMessage);
+
+    whatsappButton.href = whatsappURL;
+
+    whatsappButton.target = "_blank";
+
+    whatsappButton.rel =
+      "noopener noreferrer";
+
+    whatsappButton.setAttribute(
+      "aria-label",
+      "Chat with Silk & Sunday Intimates on WhatsApp"
+    );
+
+  }
+
+});
+
+/* =========================================
+   END OF JAVASCRIPT BLOCK 2
+========================================= */
+
