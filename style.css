@@ -698,7 +698,8 @@ section {
 /* SECTION INTRODUCTION */
 
 
-/* COLLECTION HEADING — HIGH CONTRAST */
+
+/* COLLECTION HEADING — SOFT LUXURY */
 
 .collections-preview .section-heading {
   margin-bottom: 65px;
@@ -706,27 +707,28 @@ section {
 }
 
 .collections-preview .section-eyebrow {
-  color: #ffffff;
-  font-weight: 700;
+  color: #f0dfcf;
+  font-weight: 600;
   letter-spacing: 0.25em;
-  text-shadow: 0 2px 8px rgba(45, 25, 20, 0.55);
+  text-shadow: 0 1px 4px rgba(50, 30, 25, 0.25);
 }
 
 .collections-preview .section-title {
-  color: #ffffff;
-  text-shadow: 0 3px 14px rgba(45, 25, 20, 0.45);
+  color: #f4e5d7;
+  text-shadow: 0 2px 8px rgba(50, 30, 25, 0.22);
 }
 
 .collections-preview .section-title em {
-  color: #f5cf82;
-  text-shadow: 0 2px 12px rgba(45, 25, 20, 0.45);
+  color: #e4bd80;
+  text-shadow: 0 2px 6px rgba(50, 30, 25, 0.18);
 }
 
 .collections-preview .section-description {
-  color: #ffffff;
-  font-weight: 500;
-  text-shadow: 0 2px 9px rgba(45, 25, 20, 0.65);
+  color: #f1e4d8;
+  font-weight: 400;
+  text-shadow: 0 1px 5px rgba(50, 30, 25, 0.28);
 }
+
 
 
 /* COLLECTION GRID */
