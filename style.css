@@ -677,10 +677,23 @@ section {
    08 — FEATURED COLLECTIONS
 ========================================= */
 
+
 .collections-preview {
+  position: relative;
   padding: 115px 0 125px;
-  background: var(--ivory);
+
+  background-image:
+    linear-gradient(
+      rgba(255, 248, 240, 0.18),
+      rgba(255, 248, 240, 0.18)
+    ),
+    url("collections-bg.png");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 
 /* SECTION INTRODUCTION */
 
