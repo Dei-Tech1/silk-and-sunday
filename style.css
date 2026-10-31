@@ -673,3 +673,192 @@ section {
 ========================================= */
 
 
+/* =========================================
+   08 — FEATURED COLLECTIONS
+========================================= */
+
+.collections-preview {
+  padding: 115px 0 125px;
+  background: var(--ivory);
+}
+
+/* SECTION INTRODUCTION */
+
+.collections-preview .section-heading {
+  margin-bottom: 65px;
+}
+
+.collections-preview .section-title {
+  color: var(--cocoa);
+}
+
+.collections-preview .section-title em {
+  color: var(--gold);
+}
+
+/* COLLECTION GRID */
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
+/* COLLECTION CARD */
+
+.collection-card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--border);
+  transition: transform 0.4s ease,
+              box-shadow 0.4s ease;
+}
+
+.collection-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 65px rgba(73,49,47,0.12);
+}
+
+/* COLLECTION PHOTOGRAPHY */
+
+.collection-image {
+  position: relative;
+  aspect-ratio: 4 / 4.5;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.collection-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.collection-card:hover .collection-image img {
+  transform: scale(1.07);
+}
+
+.collection-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(48,32,31,0.12),
+    transparent 55%
+  );
+  pointer-events: none;
+}
+
+/* COLLECTION CONTENT */
+
+.collection-info {
+  padding: 32px 30px 35px;
+}
+
+.collection-number {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.collection-info h3 {
+  margin-bottom: 15px;
+  color: var(--cocoa);
+  font-size: clamp(24px, 2.2vw, 31px);
+}
+
+.collection-info p {
+  min-height: 85px;
+  margin-bottom: 25px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* COLLECTION LINK */
+
+.collection-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--gold);
+  color: var(--cocoa);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.collection-link span {
+  color: var(--gold);
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.collection-link:hover {
+  color: var(--gold);
+}
+
+.collection-link:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .collections-preview {
+    padding: 85px 0;
+  }
+
+  .collection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .collection-info {
+    padding: 26px 24px 30px;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .collections-preview {
+    padding: 70px 0;
+  }
+
+  .collections-preview .section-heading {
+    margin-bottom: 40px;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .collection-image {
+    aspect-ratio: 4 / 4;
+  }
+
+  .collection-info p {
+    min-height: 0;
+  }
+
+}
+
+/* =========================================
+   END OF BLOCK 4
+========================================= */
+
